@@ -1,29 +1,17 @@
-/* @flow */
-
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-} from 'react-native';
-import { Icon } from 'native-base'
+import { Container, Content, } from 'native-base'
+//components
+import Card from '../../cardComponent/containers/card'
 
 export default class Home extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Icon type='SimpleLineIcons' name='home' />
-        <Icon type='SimpleLineIcons' name='plus' size={30} />
-        <Icon type='SimpleLineIcons' name='user' />
-      </View>
+      <Container>
+        <Content>
+          <Card />  
+        </Content>
+      </Container>
+
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
