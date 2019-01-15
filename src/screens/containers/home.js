@@ -13,7 +13,7 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <Icon type='SimpleLineIcons' name='home' />
-        <Icon type='SimpleLineIcons' name='plus' />
+        <Icon type='SimpleLineIcons' name='plus' size={30} />
         <Icon type='SimpleLineIcons' name='user' />
       </View>
     );

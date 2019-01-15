@@ -17,6 +17,7 @@ export default class Profile extends Component {
         type='SimpleLineIcons'
         name='user'
         style={{ color: tintColor}}
+        size={10}
       />
     )
   }

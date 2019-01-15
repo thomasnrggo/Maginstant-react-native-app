@@ -12,7 +12,12 @@ import Profile from './screens/containers/profile'
 
 const mainNavigation = createStackNavigator(
   {
-    Home,
+    Home: {
+      screen: Home,
+      navigationOptions: {
+        title: 'Magistant',
+      }
+    },
     AddMedia,
     Profile,
   }
@@ -29,6 +34,7 @@ const tabNavigator = createBottomTabNavigator(
             type='SimpleLineIcons'
             name='home'
             style={{ color: tintColor }}
+            size={10}
           />
         )
       }

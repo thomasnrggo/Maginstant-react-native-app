@@ -11,12 +11,13 @@ import { Icon } from 'native-base'
 export default class AddMedia extends Component {
 
   static navigationOptions = {
-    title: 'Añador',
+    title: 'Añadir',
     tabBarIcon: ({tintColor}) => (
       <Icon
         type='SimpleLineIcons'
         name='plus'
         style={{ color: tintColor }}
+        size={10}
       />
     )
   }
