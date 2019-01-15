@@ -6,8 +6,21 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { Icon } from 'native-base'
 
 export default class AddMedia extends Component {
+
+  static navigationOptions = {
+    title: 'Añador',
+    tabBarIcon: ({tintColor}) => (
+      <Icon
+        type='SimpleLineIcons'
+        name='plus'
+        style={{ color: tintColor }}
+      />
+    )
+  }
+
   render() {
     return (
       <View style={styles.container}>

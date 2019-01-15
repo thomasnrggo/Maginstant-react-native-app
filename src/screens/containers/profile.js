@@ -6,8 +6,21 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import {Icon} from 'native-base'
 
 export default class Profile extends Component {
+
+  static navigationOptions = {
+    title: 'Perfil',
+    tabBarIcon: ({tintColor}) => (
+      <Icon
+        type='SimpleLineIcons'
+        name='user'
+        style={{ color: tintColor}}
+      />
+    )
+  }
+
   render() {
     return (
       <View style={styles.container}>

@@ -4,6 +4,7 @@ import {
   createBottomTabNavigator,
   createAppContainer,
 } from 'react-navigation'
+import { Icon } from 'native-base'
 //Screens
 import Home from './screens/containers/home'
 import AddMedia from './screens/containers/add-media'
@@ -21,6 +22,16 @@ const tabNavigator = createBottomTabNavigator(
   {
     Home: {
       screen: mainNavigation,
+      navigationOptions: {
+        title: 'Inicio',
+        tabBarIcon: ({tintColor}) => (
+          <Icon
+            type='SimpleLineIcons'
+            name='home'
+            style={{ color: tintColor }}
+          />
+        )
+      }
     },
     AddMedia: {
       screen: AddMedia,
@@ -28,7 +39,18 @@ const tabNavigator = createBottomTabNavigator(
     Profile: {
       screen: Profile,
     }
-  }
+  },
+  {
+    animationEnabled: true,
+    swipeEnabled: true,
+    tabBarPosition: 'bottom',
+    tabBarOptions: {
+      activeTintColor: '#000',
+      inactiveTintColor: '#d1cece',
+      showLabel: false,
+      showIcon: true,
+    }
+   }
 )
 
 

@@ -6,12 +6,15 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { Icon } from 'native-base'
 
 export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>I'm the Home component</Text>
+        <Icon type='SimpleLineIcons' name='home' />
+        <Icon type='SimpleLineIcons' name='plus' />
+        <Icon type='SimpleLineIcons' name='user' />
       </View>
     );
   }
