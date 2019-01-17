@@ -4,9 +4,10 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
 } from 'react-native';
 import {Icon} from 'native-base'
+// components
+import ProfileComponent from '../../sections/components/profile';
 
 export default class Profile extends Component {
 
@@ -24,17 +25,7 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>I'm the Profile component</Text>
-      </View>
+      <ProfileComponent />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
