@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   btn: {
-
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   liketxt: {
     marginLeft: -2,
