@@ -1,14 +1,7 @@
-/* @flow */
-
 import React, { Component } from 'react';
-import {
-  View,
-} from 'react-native';
-import {Container, Content, Icon, Button} from 'native-base'
+import {Container, Content, Icon, } from 'native-base'
 // components
-import ProfileHead from '../../sections/components/profile-head'
-import ProfileNavigation from '../../sections/components/profile-nav'
-import ProfileBody from '../../sections/components/profile';
+import ProfileView from '../../sections/containers/profile'
 
 export default class Profile extends Component {
 
@@ -29,9 +22,7 @@ export default class Profile extends Component {
     return (
       <Container>
         <Content>
-          <ProfileHead />
-          <ProfileNavigation />
-          <ProfileBody />
+          <ProfileView />
         </Content>
       </Container>
     );
