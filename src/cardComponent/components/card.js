@@ -28,10 +28,17 @@ const CardComponent = (props) => (
           />
         </CardItem>
 
-        <CardItem style={{height: 40}}>
+        <CardItem style={styles.likeBar}>
           <Left>
-            <Button transparent style={styles.btn}>
-              <Icon type="SimpleLineIcons" name="heart" style={{color: 'black'}} />
+            <Button
+              transparent
+              style={styles.btn}
+            >
+              <Icon
+                type="SimpleLineIcons"
+                name="heart"
+                style={{color: 'black'}}
+              />
             </Button>
             <Text style={styles.liketxt}>{props.likes}</Text>
           </Left>
@@ -40,7 +47,7 @@ const CardComponent = (props) => (
         <CardItem>
           <Text style={styles.description}>
             <Text style={styles.username}>
-              {props.username}
+              {props.username} 
             </Text>
                {props.description}
           </Text>
@@ -60,6 +67,9 @@ const styles = StyleSheet.create({
     height: 250,
     width: null,
     flex: 1,
+  },
+  likeBar: {
+    height: 40,
   },
   btn: {
     justifyContent: 'center',
