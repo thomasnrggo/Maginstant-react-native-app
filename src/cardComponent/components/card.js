@@ -12,11 +12,11 @@ const CardComponent = (props) => (
         <CardItem>
           <Left>
             <Thumbnail
-              source={require('../../../assets/profile.jpg')}
+              source={props.profileImage}
             />
             <Body>
-              <Text style={styles.username}>TitanLoco8</Text>
-              <Text note>Jan 12, 2019</Text>
+              <Text style={styles.username}>{props.username}</Text>
+              <Text note>{props.uploadDate}</Text>
             </Body>
           </Left>
         </CardItem>
@@ -24,7 +24,7 @@ const CardComponent = (props) => (
         <CardItem cardBody>
           <Image
             style={styles.image}
-            source={require('../../../assets/example-01.jpg')}
+            source={props.picture}
           />
         </CardItem>
 
@@ -33,14 +33,16 @@ const CardComponent = (props) => (
             <Button transparent style={styles.btn}>
               <Icon type="SimpleLineIcons" name="heart" style={{color: 'black'}} />
             </Button>
-            <Text style={styles.liketxt}>12819 Likes</Text>
+            <Text style={styles.liketxt}>{props.likes}</Text>
           </Left>
         </CardItem>
 
         <CardItem>
-          <Text style={styles.caption}>
-            <Text style={styles.username}>TitanLoco8 </Text>
-               Con el tiempo, sabrán lo que es perder. Sentir en lo mas profundo que tienes razón... Y aun así, fallar.
+          <Text style={styles.description}>
+            <Text style={styles.username}>
+              {props.username}
+            </Text>
+               {props.description}
           </Text>
         </CardItem>
 
@@ -66,6 +68,6 @@ const styles = StyleSheet.create({
   liketxt: {
     marginLeft: -2,
   },
-  caption: {
+  description: {
   },
 });
