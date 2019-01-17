@@ -5,6 +5,8 @@ import {
   StyleSheet,
   Dimensions,
   Image,
+  TouchableOpacity,
+  Alert,
 } from 'react-native';
 import { Icon, Button} from 'native-base'
 var { height, width } = Dimensions.get('window');
@@ -38,17 +40,25 @@ export default class ProfileNav extends Component {
     })
   }
 
+  clickOnCard = () => {
+    Alert.alert('You tapped the button!')
+  }
+
   renderGridSection = () => {
     return images.map((image, index) => {
       return (
-          <View
-            key={index}
-            style={[styles.gridContainer, index % 3 !== 0 ? styles.gridPaddingLeft : styles.gridPaddingLeftNone]}
-          >
-              <Image
-                style={styles.gridImage}
-                source={image}
-              />
+          <View>
+            <TouchableOpacity
+              key={index}
+              style={[styles.gridContainer, index % 3 !== 0 ? styles.gridPaddingLeft : styles.gridPaddingLeftNone]}
+              onPress={this.clickOnCard }
+            >
+                <Image
+                  style={styles.gridImage}
+                  source={image}
+
+                />
+            </TouchableOpacity>
           </View>
       )
     })
