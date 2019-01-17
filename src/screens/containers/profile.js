@@ -3,11 +3,12 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
 } from 'react-native';
-import {Icon} from 'native-base'
+import {Container, Content, Icon, Button} from 'native-base'
 // components
-import ProfileComponent from '../../sections/components/profile';
+import ProfileHead from '../../sections/components/profile-head'
+import ProfileNavigation from '../../sections/components/profile-nav'
+import ProfileBody from '../../sections/components/profile';
 
 export default class Profile extends Component {
 
@@ -25,7 +26,13 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <ProfileComponent />
+      <Container>
+        <Content>
+          <ProfileHead />
+          <ProfileNavigation />
+          <ProfileBody />
+        </Content>
+      </Container>
     );
   }
 }

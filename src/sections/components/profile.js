@@ -5,14 +5,11 @@ import {
   Image,
 } from 'react-native';
 import { Container, Content, Text, } from 'native-base'
-// components
-import ProfileHead from './profile-head'
 
 const ProfileComponent = ({}) => (
   <Container>
     <Content>
-      <ProfileHead />
-      <Text>I'm Profile Component</Text>
+      <Text>I'm Profile body</Text>
     </Content>
   </Container>
 );
