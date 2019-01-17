@@ -13,7 +13,8 @@ import ProfileBody from '../../sections/components/profile';
 export default class Profile extends Component {
 
   static navigationOptions = {
-    title: 'Perfil',
+    title: 'TitanLoco8',
+    headerLeft: null,
     tabBarIcon: ({tintColor}) => (
       <Icon
         type='SimpleLineIcons'
