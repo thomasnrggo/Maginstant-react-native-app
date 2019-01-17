@@ -3,9 +3,26 @@ import {
   View,
   Text,
   StyleSheet,
+  Dimensions,
+  Image,
 } from 'react-native';
 import { Icon, Button} from 'native-base'
+var { height, width } = Dimensions.get('window');
 // components
+import Card from '../../cardComponent/containers/card'
+
+var images = [
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+    require('../../../assets/example-01.jpg'),
+]
 
 export default class ProfileNav extends Component {
   constructor(props) {
@@ -21,12 +38,32 @@ export default class ProfileNav extends Component {
     })
   }
 
+  renderGridSection = () => {
+    return images.map((image, index) => {
+      return (
+          <View
+            key={index}
+            style={[styles.gridContainer, index % 3 !== 0 ? styles.gridPaddingLeft : styles.gridPaddingLeftNone]}
+          >
+              <Image
+                style={styles.gridImage}
+                source={image}
+              />
+          </View>
+      )
+    })
+  }
+
   renderSection = () => {
     if (this.state.activeIndex == 0) {
       return (
-        <View>
-          <Text>First Section</Text>
+        <View style={styles.gridSectionContainer}>
+          {this.renderGridSection()}
         </View>
+      )
+    } else if (this.state.activeIndex == 1) {
+      return (
+        <Card />
       )
     }
   }
@@ -35,7 +72,7 @@ export default class ProfileNav extends Component {
     return (
       <View>
         <View>
-          <View style={styles.container}>
+          <View style={styles.navbarContainer}>
             <Button
               transparent
               onPress={()=> this.selectedView(0)}
@@ -54,7 +91,7 @@ export default class ProfileNav extends Component {
                 style={[this.state.activeIndex == 1 ? {} : {color: 'grey'}]}
               />
             </Button>
-          </View>
+          </View>{/* end navbarContainer */}
         </View>
 
         {this.renderSection()}
@@ -64,10 +101,31 @@ export default class ProfileNav extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  navbarContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     borderTopWidth: 1,
     borderTopColor: '#eae5e5',
   },
+  gridSectionContainer:{
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  gridContainer: {
+    width: (width) / 3,
+    height: (width) / 3,
+    marginBottom: 2,
+  },
+  gridPaddingLeft:{
+    paddingLeft: 2,
+  },
+  gridPaddingLeftNone: {
+    paddingLeft: 0,
+  },
+  gridImage: {
+    flex: 1,
+    alignSelf: 'stretch',
+    width: undefined,
+    height: undefined,
+  }
 });
