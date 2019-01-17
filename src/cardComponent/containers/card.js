@@ -7,7 +7,7 @@ export default class CardContainer extends Component {
   render() {
     return (
         <CardComponent
-          username='TitanLoco8 '
+          username='TitanLoco8'
           profileImage={require('../../../assets/profile.jpg')}
           uploadDate='Ene 2019'
           picture={require('../../../assets/example-01.jpg')}

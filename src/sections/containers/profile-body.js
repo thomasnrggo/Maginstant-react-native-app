@@ -63,7 +63,10 @@ export default class ProfileNav extends Component {
       )
     } else if (this.state.activeIndex == 1) {
       return (
-        <Card />
+        <View>
+          <Card />
+          <Card />
+        </View>
       )
     }
   }
