@@ -9,6 +9,7 @@ import {
   Alert,
 } from 'react-native';
 import { Icon, Button} from 'native-base'
+import { withNavigation } from 'react-navigation';
 var { height, width } = Dimensions.get('window');
 // components
 import Card from '../../cardComponent/containers/card'
@@ -26,7 +27,7 @@ var images = [
     require('../../../assets/example-01.jpg'),
 ]
 
-export default class ProfileNav extends Component {
+class ProfileNav extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -41,7 +42,7 @@ export default class ProfileNav extends Component {
   }
 
   clickOnCard = () => {
-    Alert.alert('You tapped the button!')
+    this.props.navigation.navigate('Detail');
   }
 
   renderGridSection = () => {
@@ -51,7 +52,7 @@ export default class ProfileNav extends Component {
             <TouchableOpacity
               key={index}
               style={[styles.gridContainer, index % 3 !== 0 ? styles.gridPaddingLeft : styles.gridPaddingLeftNone]}
-              onPress={this.clickOnCard }
+              onPress={this.clickOnCard}
             >
                 <Image
                   style={styles.gridImage}
@@ -112,6 +113,8 @@ export default class ProfileNav extends Component {
     );
   }
 }
+
+export default withNavigation(ProfileNav);
 
 const styles = StyleSheet.create({
   navbarContainer: {

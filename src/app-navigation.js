@@ -9,6 +9,7 @@ import { Icon } from 'native-base'
 import Home from './screens/containers/home'
 import AddMedia from './screens/containers/add-media'
 import Profile from './screens/containers/profile'
+import Detail from './screens/containers/detail'
 
 const mainNavigation = createStackNavigator(
   {
@@ -20,6 +21,7 @@ const mainNavigation = createStackNavigator(
     },
     AddMedia,
     Profile,
+    Detail,
   }
 )
 

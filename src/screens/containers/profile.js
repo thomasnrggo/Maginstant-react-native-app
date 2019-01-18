@@ -8,6 +8,7 @@ export default class Profile extends Component {
   static navigationOptions = {
     title: 'TitanLoco8',
     headerLeft: null,
+    headerBackTitle: null,
     tabBarIcon: ({tintColor}) => (
       <Icon
         type='SimpleLineIcons'
