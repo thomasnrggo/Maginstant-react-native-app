@@ -31,16 +31,13 @@ export default class AddMedia extends Component {
           }}
           style={styles.preview}
           type={RNCamera.Constants.Type.back}
-          flashMode={RNCamera.Constants.FlashMode.on}
+          flashMode={RNCamera.Constants.FlashMode.off}
           permissionDialogTitle={'Permission to use camera'}
           permissionDialogMessage={'We need your permission to use your camera phone'}
-          onGoogleVisionBarcodesDetected={({ barcodes }) => {
-            console.log(barcodes);
-          }}
         />
         <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
           <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
-            <Text style={{ fontSize: 14 }}> SNAP </Text>
+
           </TouchableOpacity>
         </View>
       </View>
@@ -69,11 +66,13 @@ const styles = StyleSheet.create({
   },
   capture: {
     flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    borderRadius: 25,
     padding: 15,
     paddingHorizontal: 20,
     alignSelf: 'center',
+    width: 50,
+    height: 50,
     margin: 20,
   },
 });
