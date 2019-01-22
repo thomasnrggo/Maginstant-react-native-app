@@ -6,6 +6,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { Container, Content, } from 'native-base'
 // components
 import Card from '../../cardComponent/containers/card'
 
@@ -15,7 +16,12 @@ export default class DetailPost extends Component {
   }
   render() {
     return (
-      <Card />
+      <Container>
+        <Content>
+          <Card />
+        </Content>
+      </Container>
+
     );
   }
 }
