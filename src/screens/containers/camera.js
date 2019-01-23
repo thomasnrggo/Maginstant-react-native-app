@@ -12,7 +12,7 @@ import { Icon } from 'native-base'
 export default class Camera extends Component {
 
   static navigationOptions = {
-    header: null,
+    // header: null,
   }
 
   render() {
