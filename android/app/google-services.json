@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "981261587712",
+    "firebase_url": "https://magistant-c3788.firebaseio.com",
+    "project_id": "magistant-c3788",
+    "storage_bucket": "magistant-c3788.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981261587712:android:17c13d0a7237e61f",
+        "android_client_info": {
+          "package_name": "com.maginstantapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981261587712-mq9c5hp2q3jp9fi90p176ed1tjmt89sc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtrpNA17wLGlniimurkLpyeLB9VF_BiVo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
