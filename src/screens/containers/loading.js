@@ -1,21 +1,32 @@
-/* @flow */
-
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-} from 'react-native';
+import firebase from 'react-native-firebase';
 // components
 import LoadingUI from '../../sections/components/loading'
 
 export default class Loading extends Component {
 
+  constructor() {
+    super();
+    this.unsubscriber = null;
+    this.state = {
+     user: null,
+   };
+  }
 
   componentDidMount() {
-    if (!this.props.user) {
-      this.props.navigation.navigate('App')
-    } else {
-      this.props.navigation.navigate('Login')
+    this.unsubscriber = firebase.auth().onAuthStateChanged((user) => {
+      this.setState({ user });
+      if (!this.state.user) {
+        this.props.navigation.navigate('Login')
+      } else {
+        this.props.navigation.navigate('App')
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    if (this.unsubscriber) {
+      this.unsubscriber();
     }
   }
 
