@@ -18,7 +18,7 @@ export default class DetailPost extends Component {
     return (
       <Container>
         <Content>
-          <Card />
+          <Card {...this.props} />
         </Content>
       </Container>
 

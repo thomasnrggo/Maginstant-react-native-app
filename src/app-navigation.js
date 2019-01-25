@@ -3,6 +3,7 @@ import {
   createStackNavigator,
   createBottomTabNavigator,
   createAppContainer,
+  createSwitchNavigator,
 } from 'react-navigation'
 import { Icon } from 'native-base'
 //Screens
@@ -11,6 +12,8 @@ import AddMedia from './screens/containers/add-media'
 import Profile from './screens/containers/profile'
 import Detail from './screens/containers/detail'
 import Camera from './screens/containers/camera'
+import Login from './screens/containers/login'
+import Loading from './screens/containers/loading'
 
 const mainNavigation = createStackNavigator(
   {
@@ -63,5 +66,16 @@ const tabNavigator = createBottomTabNavigator(
    }
 )
 
+const switchNavigator = createSwitchNavigator(
+  {
+    Loading: Loading,
+    App: tabNavigator,
+    Login: Login,
+  },
+  {
+    initialRouteName: 'Loading',
+  }
+)
 
-export default createAppContainer(tabNavigator)
+
+export default createAppContainer(switchNavigator)
