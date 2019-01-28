@@ -8,7 +8,7 @@ import {
 import { Container, Header, Content, Card, CardItem, Text, Body, Left, Thumbnail, Button, Icon, Right } from "native-base";
 
 clickLike = () =>{
-  
+
 }
 
 const CardComponent = (props) => (

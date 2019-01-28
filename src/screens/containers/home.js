@@ -12,7 +12,7 @@ export default class Home extends Component {
       data:
       [
         {
-          "id": 10,
+          "id": "10",
           "username": "TitanLoco8",
           "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
           "type": "picture",
@@ -23,7 +23,7 @@ export default class Home extends Component {
           "createAt": "23 Jan 19",
         },
         {
-          "id": 11,
+          "id": "11",
           "username": "TitanLoco8",
           "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
           "type": "picture",
@@ -34,7 +34,7 @@ export default class Home extends Component {
           "createAt": "23 Jan 19",
         },
         {
-          "id": 11,
+          "id": "12",
           "username": "TitanLoco8",
           "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
           "type": "picture",
