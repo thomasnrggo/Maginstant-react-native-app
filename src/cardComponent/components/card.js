@@ -12,7 +12,9 @@ const CardComponent = (props) => (
         <CardItem>
           <Left>
             <Thumbnail
-              source={props.profileImage}
+              source={{
+                uri: props.profileImage
+              }}
             />
             <Body>
               <Text style={styles.username}>{props.username}</Text>
@@ -24,7 +26,9 @@ const CardComponent = (props) => (
         <CardItem cardBody>
           <Image
             style={styles.image}
-            source={props.picture}
+            source={{
+              uri: props.picture
+            }}
           />
         </CardItem>
 
@@ -47,7 +51,7 @@ const CardComponent = (props) => (
         <CardItem>
           <Text style={styles.description}>
             <Text style={styles.username}>
-              {props.username} 
+              {props.username}
             </Text>
                {props.description}
           </Text>
