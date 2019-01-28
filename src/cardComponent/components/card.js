@@ -3,9 +3,13 @@ import {
   View,
   Image,
   StyleSheet,
+  Alert,
 } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Text, Body, Left, Thumbnail, Button, Icon, Right } from "native-base";
 
+clickLike = () =>{
+  
+}
 
 const CardComponent = (props) => (
       <Card>
@@ -37,6 +41,7 @@ const CardComponent = (props) => (
             <Button
               transparent
               style={styles.btn}
+              onPress={this.clickLike}
             >
               <Icon
                 type="SimpleLineIcons"

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native'
+import { FlatList, } from 'react-native'
 import { Container, Content, } from 'native-base'
 //components
 import Card from '../../cardComponent/containers/card'
