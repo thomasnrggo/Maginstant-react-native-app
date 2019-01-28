@@ -16,7 +16,7 @@ export default class Loading extends Component {
   componentDidMount() {
     this.unsubscriber = firebase.auth().onAuthStateChanged((user) => {
       this.setState({ user });
-      if (!this.state.user) {
+      if (this.state.user) {
         this.props.navigation.navigate('Login')
       } else {
         this.props.navigation.navigate('App')

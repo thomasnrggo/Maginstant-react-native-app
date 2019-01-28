@@ -8,6 +8,7 @@ target 'MaginstantApp' do
   # Pods for MaginstantApp
   pod 'Firebase/Core'
   pod 'Firebase/Auth', '~> 5.15.0'
+  pod 'Firebase/Database'
 
   target 'MaginstantApp-tvOSTests' do
     inherit! :search_paths
