@@ -5,68 +5,138 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
+  TouchableHighlight,
+  Dimensions,
+  Image,
+  CameraRoll,
 } from 'react-native';
-import { RNCamera } from 'react-native-camera'
+import Camera from 'react-native-camera'
 import { Icon } from 'native-base'
 
-export default class Camera extends Component {
+export default class CameraRoute extends Component {
 
   static navigationOptions = {
     // header: null,
+    tabBarVisible: false,
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      path: null,
+    };
+  }
+
+  // takePicture = async function() {
+  //   if (this.camera) {
+  //     const options = { quality: 0.5, base64: true };
+  //     const data = await this.camera.takePictureAsync(options);
+  //     console.log(data.uri);
+  //   }
+  // };
+
+  takePicture = () => {
+    this.camera.capture()
+      .then((data) => {
+        console.log(data);
+        this.setState({ path: data.path })
+      })
+      .catch(err => console.error(err))
+  }
+
+  renderCamera = () => {
+    return (
+      <SafeAreaView>
+        <Camera
+          ref={(cam) => {
+            this.camera = cam;
+          }}
+          style={styles.preview}
+          aspect={Camera.constants.Aspect.fill}
+          captureTarget={Camera.constants.CaptureTarget.disk}
+        />
+        <TouchableHighlight
+          style={styles.capture}
+          onPress={this.takePicture.bind(this)}
+          underlayColor="rgba(255, 255, 255, 0.5)"
+        >
+          <View />
+        </TouchableHighlight>
+      </SafeAreaView>
+    )
+  }
+
+  renderImage = () => {
+    return (
+      <View>
+        <Image
+          source={{ uri: this.state.path }}
+          style={styles.preview}
+        />
+        <Text
+          style={styles.cancel}
+          onPress={() => this.setState({ path: null })}
+        >Cancel
+        </Text>
+        <Text
+          style={styles.save}
+          onPress={() => CameraRoll.saveToCameraRoll( this.state.path )}
+        >Save
+        </Text>
+
+
+      </View>
+    )
   }
 
   render() {
     return (
-      <SafeAreaView style={styles.container}>
-        <RNCamera
-          ref={ref => {
-            this.camera = ref;
-          }}
-          style={styles.preview}
-          type={RNCamera.Constants.Type.back}
-          flashMode={RNCamera.Constants.FlashMode.on}
-          permissionDialogTitle={'Permission to use camera'}
-          permissionDialogMessage={'We need your permission to use your camera phone'}
-          onGoogleVisionBarcodesDetected={({ barcodes }) => {
-            console.log(barcodes);
-          }}
-        />
-        <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
-          <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
-            <Text style={{ fontSize: 14 }}> SNAP </Text>
-          </TouchableOpacity>
-        </View>
-      </SafeAreaView>
+      <View style={styles.container}>
+        {this.state.path ? this.renderImage() : this.renderCamera()}
+      </View>
     );
   }
-
-  takePicture = async function() {
-    if (this.camera) {
-      const options = { quality: 0.5, base64: true };
-      const data = await this.camera.takePictureAsync(options);
-      console.log(data.uri);
-    }
-  };
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#000',
   },
   preview: {
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width,
   },
   capture: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    padding: 15,
-    paddingHorizontal: 20,
-    alignSelf: 'center',
-    margin: 20,
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    borderWidth: 5,
+    borderColor: '#FFF',
+    marginBottom: 15,
   },
+  cancel: {
+    position: 'absolute',
+    right: 20,
+    top: 20,
+    backgroundColor: 'transparent',
+    color: '#FFF',
+    fontWeight: '600',
+    fontSize: 17,
+  },
+  save: {
+    position: 'absolute',
+    left: 20,
+    top: 20,
+    backgroundColor: 'transparent',
+    color: '#FFF',
+    fontWeight: '600',
+    fontSize: 17,
+  }
 });

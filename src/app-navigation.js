@@ -26,7 +26,12 @@ const mainNavigation = createStackNavigator(
     AddMedia,
     Profile,
     Detail,
-    Camera,
+    Camera: {
+      screen: Camera,
+      navigationOptions: {
+        tabBarVisible: false,
+      }
+    }
   }
 )
 
@@ -36,14 +41,14 @@ const tabNavigator = createBottomTabNavigator(
       screen: mainNavigation,
       navigationOptions: {
         title: 'Inicio',
-        tabBarIcon: ({tintColor}) => (
+        tabBarIcon: ({tintColor, focused}) => (
           <Icon
             type='SimpleLineIcons'
             name='home'
-            style={{ color: tintColor }}
+            color={tintColor}
             size={10}
           />
-        )
+        ),
       }
     },
     AddMedia: {
@@ -58,7 +63,7 @@ const tabNavigator = createBottomTabNavigator(
     swipeEnabled: true,
     tabBarPosition: 'bottom',
     tabBarOptions: {
-      activeTintColor: '#000',
+      activeTintColor: '#373737',
       inactiveTintColor: '#d1cece',
       showLabel: false,
       showIcon: true,

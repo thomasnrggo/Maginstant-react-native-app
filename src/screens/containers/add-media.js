@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  Dimensions,
 } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import { RNCamera } from 'react-native-camera'
@@ -78,7 +79,7 @@ export default class AddMedia extends Component {
       <SafeAreaView style={styles.container}>
         <Image
           source={this.state.imageUpdated}
-          style={{width: 500, height: 500,}}
+          style={{width: Dimensions.get('window').width, height: 400}}
         />
         <Button
           dark

@@ -9,14 +9,14 @@ export default class Profile extends Component {
     title: 'TitanLoco8',
     headerLeft: null,
     headerBackTitle: null,
-    tabBarIcon: ({tintColor}) => (
+    tabBarIcon: ({tintColor, focused}) => (
       <Icon
         type='SimpleLineIcons'
         name='user'
         style={{ color: tintColor}}
         size={10}
       />
-    )
+    ),
   }
 
   render() {

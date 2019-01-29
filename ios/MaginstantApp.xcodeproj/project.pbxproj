@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -46,6 +47,7 @@
 		332130B2394045B69A3872DE /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A152D85CEA42448EA1C31EAF /* Entypo.ttf */; };
 		372998AF21F7936E0052D6B3 /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 372998AE21F7931B0052D6B3 /* libRCTCameraRoll.a */; };
 		37AA9A4C21FA510A00F28934 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37AA9A2021FA510900F28934 /* GoogleService-Info.plist */; };
+		37AA9AE82200D63C00F28934 /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 372998AE21F7931B0052D6B3 /* libRCTCameraRoll.a */; };
 		37EF73C0B2C34A0684B36A24 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 953234D9EEF64BA880B12957 /* MaterialCommunityIcons.ttf */; };
 		392265CBA681433B857BCD22 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 230D78980D574FFBB5584DD1 /* libRNFirebase.a */; };
 		4AC90DD812854591B5310885 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5454A7DDA18247CC8AC23230 /* MaterialIcons.ttf */; };
@@ -510,6 +512,7 @@
 				C78E828B347B4F9D9049DC87 /* libRNImagePicker.a in Frameworks */,
 				1F29195C76C4F03CA672B731 /* libPods-MaginstantApp.a in Frameworks */,
 				392265CBA681433B857BCD22 /* libRNFirebase.a in Frameworks */,
+				37AA9AE82200D63C00F28934 /* libRCTCameraRoll.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
