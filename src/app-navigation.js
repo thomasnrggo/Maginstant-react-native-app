@@ -14,6 +14,7 @@ import Detail from './screens/containers/detail'
 import Camera from './screens/containers/camera'
 import Login from './screens/containers/login'
 import Loading from './screens/containers/loading'
+import NewPost from './screens/containers/newpost'
 
 const mainNavigation = createStackNavigator(
   {
@@ -30,6 +31,12 @@ const mainNavigation = createStackNavigator(
       screen: Camera,
       navigationOptions: {
         tabBarVisible: false,
+      }
+    },
+    NewPost: {
+      screen: NewPost,
+      navigationOptions: {
+        title: 'Nuevo post',
       }
     }
   }
@@ -59,16 +66,12 @@ const tabNavigator = createBottomTabNavigator(
     }
   },
   {
-    animationEnabled: true,
-    swipeEnabled: true,
-    tabBarPosition: 'bottom',
     tabBarOptions: {
-      activeTintColor: '#373737',
-      inactiveTintColor: '#d1cece',
       showLabel: false,
-      showIcon: true,
-    }
-   }
+      activeTintColor: 'black',
+      inactiveTintColor: 'gray',
+    },
+  },
 )
 
 const switchNavigator = createSwitchNavigator(

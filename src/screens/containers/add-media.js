@@ -75,33 +75,14 @@ export default class AddMedia extends Component {
   }
 
   render() {
+    if (this.state.imageUpdated) {
+      const selectedImage = this.state.imageUpdated
+      this.props.navigation.navigate('NewPost', { image: selectedImage });
+    }
     return (
       <SafeAreaView style={styles.container}>
-        <Image
-          source={this.state.imageUpdated}
-          style={{width: Dimensions.get('window').width, height: 400}}
-        />
-        <Button
-          dark
-          transparent
-          full
-          bordered
-          style={styles.btn}
-          onPress={this.handleCameraClick}
-        >
-          <Text>Tomar foto</Text>
-        </Button>
-        <Button
-          dark
-          transparent
-          full
-          bordered
-          style={styles.btn}
-          onPress={this.openImagePiker}
-        >
-          <Text>Desde Galeria</Text>
-        </Button>
-
+          <Text onPress={this.handleCameraClick}>Tomar foto</Text>
+          <Text onPress={this.openImagePiker}>Desde Galeria</Text>
       </SafeAreaView>
     );
   }
@@ -110,7 +91,7 @@ export default class AddMedia extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   btn: {
