@@ -7,9 +7,30 @@ import {
   StyleSheet,
   Dimensions,
   TextInput,
-} from 'react-native';
+  Button,
+} from 'react-native'
+import { Icon } from 'native-base'
 
 export default class NewPost extends Component {
+
+  static navigationOptions = ({ navigation }) => {
+    const { goBack } = navigation;
+    return {
+      headerLeft: (
+        <Button
+          title="Cancelar"
+          onPress={() => goBack()}
+        />
+      ),
+      headerRight: (
+        <Button
+          title="Publicar"
+          onPress={()=> navigation.navigate('Home') }
+        />
+      ),
+    };
+  };
+
   render() {
     const image = this.props.navigation.getParam('image');
     return (
