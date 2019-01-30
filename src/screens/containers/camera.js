@@ -9,6 +9,7 @@ import {
   Dimensions,
   Image,
   CameraRoll,
+  StatusBar,
 } from 'react-native';
 import Camera from 'react-native-camera'
 import { Icon } from 'native-base'
@@ -16,7 +17,9 @@ import { Icon } from 'native-base'
 export default class CameraRoute extends Component {
 
   static navigationOptions = {
-    // header: null,
+    header: null,
+    headerTransparent: true,
+    headerTintColor: '#fff',
     tabBarVisible: false,
   }
 
@@ -27,14 +30,6 @@ export default class CameraRoute extends Component {
       path: null,
     };
   }
-
-  // takePicture = async function() {
-  //   if (this.camera) {
-  //     const options = { quality: 0.5, base64: true };
-  //     const data = await this.camera.takePictureAsync(options);
-  //     console.log(data.uri);
-  //   }
-  // };
 
   takePicture = () => {
     this.camera.capture()
@@ -48,6 +43,7 @@ export default class CameraRoute extends Component {
   renderCamera = () => {
     return (
       <SafeAreaView>
+        <StatusBar barStyle="light-content" />
         <Camera
           ref={(cam) => {
             this.camera = cam;
@@ -63,26 +59,35 @@ export default class CameraRoute extends Component {
         >
           <View />
         </TouchableHighlight>
+        <Text
+          style={styles.cancel}
+          onPress={() => this.props.navigation.goBack()}
+        >Regresar
+        </Text>
       </SafeAreaView>
     )
   }
 
   renderImage = () => {
+    const picture = this.state.path
     return (
       <View>
         <Image
-          source={{ uri: this.state.path }}
+          source={{ uri: picture }}
           style={styles.preview}
         />
         <Text
-          style={styles.cancel}
-          onPress={() => this.setState({ path: null })}
-        >Cancel
+          style={styles.save}
+          onPress={() => {
+            CameraRoll.saveToCameraRoll(picture)
+            this.props.navigation.navigate('NewPost', { image: picture });
+          }}
+        >Siguiente
         </Text>
         <Text
-          style={styles.save}
-          onPress={() => CameraRoll.saveToCameraRoll( this.state.path )}
-        >Save
+          style={styles.cancel}
+          onPress={() => this.setState({ path: null })}
+        >Regresar
         </Text>
 
 
@@ -120,11 +125,12 @@ const styles = StyleSheet.create({
     borderWidth: 5,
     borderColor: '#FFF',
     marginBottom: 15,
+    alignSelf: 'center',
   },
   cancel: {
     position: 'absolute',
-    right: 20,
-    top: 20,
+    left: 20,
+    top: 50,
     backgroundColor: 'transparent',
     color: '#FFF',
     fontWeight: '600',
@@ -132,8 +138,8 @@ const styles = StyleSheet.create({
   },
   save: {
     position: 'absolute',
-    left: 20,
-    top: 20,
+    right: 20,
+    top: 50,
     backgroundColor: 'transparent',
     color: '#FFF',
     fontWeight: '600',

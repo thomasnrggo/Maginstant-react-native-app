@@ -21,7 +21,7 @@ export default class AddMedia extends Component {
 
   static navigationOptions = {
     header: null,
-    headerBackTitle: 'Cancelar',
+    headerBackTitle: 'Regresar',
     tabBarIcon: ({tintColor}) => (
       <Icon
         type='SimpleLineIcons'

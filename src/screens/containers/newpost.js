@@ -19,7 +19,7 @@ export default class NewPost extends Component {
       headerLeft: (
         <Button
           title="Cancelar"
-          onPress={() => goBack()}
+          onPress={() => navigation.navigate('AddMedia')}
         />
       ),
       headerRight: (
