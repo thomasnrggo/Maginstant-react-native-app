@@ -82,8 +82,8 @@ export default class AddMedia extends Component {
     }
     return (
       <SafeAreaView style={styles.container}>
-          <Text onPress={this.handleCameraClick}>Tomar foto</Text>
-          <Text onPress={this.openImagePiker}>Desde Galeria</Text>
+          <Text style={{margin: 8}} onPress={this.handleCameraClick}>Tomar foto</Text>
+          <Text style={{margin: 8}} onPress={this.openImagePiker}>Desde Galeria</Text>
       </SafeAreaView>
     );
   }
