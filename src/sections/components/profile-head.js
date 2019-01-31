@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { Container, Content, Text, } from 'native-base'
 
-const ProfileHead = ({}) => (
+const ProfileHead = () => (
   <View style={styles.profileHeadContainer}>
     <View style={styles.profileHeadWrapper}>
       <View style={styles.profileImageContainer}>

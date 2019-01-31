@@ -6,6 +6,8 @@ import {
   Dimensions,
   Image,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  ScrollView,
   Alert,
   FlatList,
 } from 'react-native';
@@ -102,7 +104,7 @@ class ProfileNav extends Component {
       return (
           <View>
             <TouchableOpacity
-              key={index}
+              key={this._keyExtractor}
               style={[styles.gridContainer, index % 3 !== 0 ? styles.gridPaddingLeft : styles.gridPaddingLeftNone]}
               onPress={()=> {
                 const data = this.state.data
@@ -120,16 +122,16 @@ class ProfileNav extends Component {
   }
 
   renderListSection = ({item}) => (
-    <Card
-      id={item.id}
-      username={item.username}
-      profileImage={item.profileImage}
-      uploadDate={item.createAt}
-      picture={item.picture}
-      Liked={item.liked}
-      likes={item.likes}
-      description={item.description}
-    />
+      <Card
+        id={item.id}
+        username={item.username}
+        profileImage={item.profileImage}
+        uploadDate={item.createAt}
+        picture={item.picture}
+        Liked={item.liked}
+        likes={item.likes}
+        description={item.description}
+      />
   )
 
   renderSection = () => {
@@ -140,13 +142,13 @@ class ProfileNav extends Component {
         </View>
       )
     } else if (this.state.activeIndex == 1) {
+      const item = this.state.data[0];
       return (
-            <FlatList
-              style={{flex:1}}
-              data={this.state.data}
-              keyExtractor={this._keyExtractor}
-              renderItem={this.renderListSection}
-            />
+        <FlatList
+          data={this.state.data}
+          keyExtractor={this._keyExtractor}
+          renderItem={this.renderListSection}
+        />
       )
     }
   }
