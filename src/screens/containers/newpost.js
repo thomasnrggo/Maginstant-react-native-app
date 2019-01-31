@@ -8,6 +8,7 @@ import {
   Dimensions,
   TextInput,
   Button,
+  Platform,
 } from 'react-native'
 import { Icon } from 'native-base'
 
@@ -18,12 +19,14 @@ export default class NewPost extends Component {
     return {
       headerLeft: (
         <Button
+          style={{marginLeft: 5}}
           title="Cancelar"
           onPress={() => navigation.navigate('AddMedia')}
         />
       ),
       headerRight: (
         <Button
+          style={{marginRight: 5}}
           title="Publicar"
           onPress={()=> navigation.navigate('Home') }
         />

@@ -36,7 +36,8 @@ const mainNavigation = createStackNavigator(
     NewPost: {
       screen: NewPost,
       navigationOptions: {
-        title: 'Nuevo post',
+        title: '',
+        headerLayoutPreset: 'center',
       }
     }
   }
