@@ -90,7 +90,9 @@ class ProfileNav extends Component {
   }
 
   clickOnCard = () => {
-    this.props.navigation.navigate('Detail');
+    const data = this.state.data
+    const id = this.index
+    this.props.navigation.navigate('Detail', {data: data, itemId: id });
   }
 
   renderGridSection = () => {
@@ -102,7 +104,10 @@ class ProfileNav extends Component {
             <TouchableOpacity
               key={index}
               style={[styles.gridContainer, index % 3 !== 0 ? styles.gridPaddingLeft : styles.gridPaddingLeftNone]}
-              onPress={this.clickOnCard}
+              onPress={()=> {
+                const data = this.state.data
+                this.props.navigation.navigate('Detail', {data: data, itemId: index });
+              }}
             >
                 <Image
                   style={styles.gridImage}

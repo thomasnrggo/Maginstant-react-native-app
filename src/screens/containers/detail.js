@@ -15,10 +15,23 @@ export default class DetailPost extends Component {
     title: 'Foto',
   }
   render() {
+    const data = this.props.navigation.getParam('data')
+    const index = this.props.navigation.getParam('itemId')
+    const item = data[index]
+
     return (
       <Container>
         <Content>
-          <Card {...this.props} />
+          <Card
+            id={item.id}
+            username={item.username}
+            profileImage={item.profileImage}
+            uploadDate={item.createAt}
+            picture={item.picture}
+            Liked={item.liked}
+            likes={`${item.likes} likes`}
+            description={item.description}
+          />
         </Content>
       </Container>
 
