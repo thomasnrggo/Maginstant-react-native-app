@@ -56,7 +56,7 @@ const CardComponent = (props) => (
         <CardItem>
           <Text style={styles.description}>
             <Text style={styles.username}>
-              {props.username}
+              {`${props.username} `}
             </Text>
                {props.description}
           </Text>
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   image: {
-    height: 250,
+    height: 400,
     width: null,
     flex: 1,
   },
