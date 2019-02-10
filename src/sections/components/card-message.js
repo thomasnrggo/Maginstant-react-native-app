@@ -1,36 +1,45 @@
 import React from 'react';
-import {
-  StyleSheet,
-} from 'react-native';
-import { Card, CardItem, Thumbnail, Body, Left, Text} from 'native-base'
+import { View, StyleSheet, Image} from 'react-native';
+import { Card, CardItem, Thumbnail, Body, Left, Right, Text, Icon} from 'native-base'
 
 const CardMessage = (props) => (
-  <Card style={styles.cardContainer}>
-    <CardItem>
-      <Left>
-        <Thumbnail
-          style={styles.thumbnail}
-          source={{
-            uri: props.profileImage
-          }}
-        />
-        <Body>
-          <Text>{props.username}</Text>
-          <Text note>{props.lastMessage}</Text>
-        </Body>
-      </Left>
-    </CardItem>
-  </Card>
+  <View style={styles.messageContainer}>
+    <Thumbnail
+      source={{ uri: props.profileImage }}
+    />
+    <View style={styles.messageInfo}>
+      <Text style={styles.messageText}>{props.username}</Text>
+      <Text style={styles.messageText} note>{props.lastMessage}</Text>
+    </View>
+    <Right style={{justifyContent: 'flex-end'}}>
+      <Icon
+        type='SimpleLineIcons'
+        name='camera'
+        style={styles.icon}
+      />
+    </Right>
+  </View>
+
 );
 
 export default CardMessage;
 
 const styles = StyleSheet.create({
-  cardContainer: {
-    borderColor: 'transparent',
-    shadowColor: 'transparent',
+  messageContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    marginVertical: 5,
   },
-  thumbnail: {
-    marginLeft: -5,
+  messageInfo: {
+    paddingLeft: 10,
+  },
+  messageText: {
+    fontSize: 14,
+  },
+  icon: {
+    fontSize: 26,
+    color: 'gray',
+    marginRight: 1,
   }
 });

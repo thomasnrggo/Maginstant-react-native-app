@@ -4,11 +4,16 @@ import {
   TextInput,
   StyleSheet,
   FlatList,
+  TouchableOpacity,
 } from 'react-native';
 import {Container, Content, Card, CardItem, Thumbnail, Body, Left, Text} from 'native-base'
 import CardMessage from '../../sections/components/card-message'
 
 export default class Messages extends Component {
+
+  static navigationOptions = {
+    title: 'Mensajes',
+  }
 
   constructor(props) {
     super(props)
@@ -33,14 +38,16 @@ export default class Messages extends Component {
     }
   }
 
-  renderMessage = ({item}) => {
-    <CardMessage
-      id={item.id}
-      profileImage={item.profileImage}
-      username={item.username}
-      lastMessage={item.lastMessage}
-    />
-  }
+  renderMessageList = ({item}) => (
+    <TouchableOpacity>
+      <CardMessage
+        id={item.id}
+        profileImage={item.profileImage}
+        username={item.username}
+        lastMessage={item.lastMessage}
+      />
+    </TouchableOpacity>
+  )
 
   _keyExtractor = (item, index) => item.id;
 
@@ -54,24 +61,13 @@ export default class Messages extends Component {
               placeholder='Buscar'
             />
           </View>
-          <CardMessage
-            id='111'
-            profileImage='https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7'
-            username='usuario de prueba'
-            lastMessage='ola k ase'
-          />
-          <CardMessage
-            id='111'
-            profileImage='https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7'
-            username='usuario de prueba'
-            lastMessage='ola k ase'
-          />
-          <CardMessage
-            id='111'
-            profileImage='https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7'
-            username='usuario de prueba'
-            lastMessage='ola k ase'
-          />
+          <View>
+            <FlatList
+            data={this.state.data}
+            keyExtractor={this._keyExtractor}
+            renderItem={this.renderMessageList}
+            />
+          </View>
         </Content>
       </Container>
 

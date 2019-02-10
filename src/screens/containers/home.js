@@ -10,6 +10,7 @@ export default class Home extends Component {
 
   static navigationOptions = ({navigation}) => {
     return {
+      headerBackTitle: null,
       headerLeft:
       (
         <Icon
