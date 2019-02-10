@@ -15,6 +15,7 @@ import Camera from './screens/containers/camera'
 import Login from './screens/containers/login'
 import Loading from './screens/containers/loading'
 import NewPost from './screens/containers/newpost'
+import Messages from './screens/containers/messages'
 
 const mainNavigation = createStackNavigator(
   {
@@ -27,6 +28,7 @@ const mainNavigation = createStackNavigator(
     AddMedia,
     Profile,
     Detail,
+    Messages,
     Camera: {
       screen: Camera,
       navigationOptions: {

@@ -1,12 +1,35 @@
 import React, { Component } from 'react';
 import { FlatList, } from 'react-native'
-import { Container, Content, } from 'native-base'
+import { Container, Content, Icon } from 'native-base'
 //components
 import Card from '../../cardComponent/containers/card'
 
 import API from '../../../api.json'
 
 export default class Home extends Component {
+
+  static navigationOptions = ({navigation}) => {
+    return {
+      headerLeft:
+      (
+        <Icon
+        type='SimpleLineIcons'
+        name='camera'
+        style={{marginLeft: 10}}
+        onPress={()=> navigation.navigate('Camera')}
+        />
+      ),
+      headerRight:
+      (
+        <Icon
+        type='SimpleLineIcons'
+        name='paper-plane'
+        style={{marginRight: 10}}
+        onPress={()=> navigation.navigate('Messages')}
+        />
+      ),
+    }
+  }
 
   constructor(props) {
     super(props)
@@ -70,6 +93,10 @@ export default class Home extends Component {
         },
       ],
     }
+  }
+
+  onMessageClick = () => {
+
   }
 
   _keyExtractor = (item, index) => item.id;

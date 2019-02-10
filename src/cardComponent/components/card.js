@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   image: {
-    height: 400,
+    height: 360,
     width: null,
     flex: 1,
   },
