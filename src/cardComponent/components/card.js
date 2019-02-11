@@ -4,12 +4,10 @@ import {
   Image,
   StyleSheet,
   Alert,
+  TextInput,
 } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Text, Body, Left, Thumbnail, Button, Icon, Right } from "native-base";
 
-clickLike = () =>{
-
-}
 
 const CardComponent = (props) => (
       <Card>
@@ -65,7 +63,8 @@ const CardComponent = (props) => (
               note
               onPress={()=> {console.log('Me toco!')}}
             >
-              ver los 13 comentarios
+              {/**`Ver Todos los comentarios(${props.comments})`**/}
+              {`Ver Todos los comentarios(2)`}
             </Text>
           </Body>
         </CardItem>
@@ -74,13 +73,37 @@ const CardComponent = (props) => (
           <Body style={styles.commetsContainer}>
             <Text style={styles.commet}>
               <Text style={styles.commetUsername}>{`Gamo_ri `}</Text>
-              Comentario
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </Text>
             <Text style={styles.commet}>
               <Text style={styles.commetUsername}>{`NebulaZa `}</Text>
-              lorem ipsum amenr.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </Text>
           </Body>
+        </CardItem>
+
+        <CardItem style={{alignItems: 'flex-end'}}>
+          <Thumbnail
+            small
+            source={{
+              uri: props.profileImage
+            }}
+          />
+          <TextInput
+            style={styles.commetInput}
+            multiline
+            placeholder='Agrega un comentario...'
+          />
+          <Button
+            transparent
+          >
+            <Icon
+              type="SimpleLineIcons"
+              name="paper-plane"
+              style={{color: '#3d3d3d'}}
+            />
+          </Button>
+
         </CardItem>
 
 
@@ -125,5 +148,11 @@ const styles = StyleSheet.create({
     lineHeight: 16,
     fontSize: 14,
     marginBottom: 4,
+  },
+  commetInput: {
+    flex: 1,
+    padding: 10,
+    marginHorizontal: 8,
+    borderRadius: 8,
   },
 });

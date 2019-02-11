@@ -48,6 +48,20 @@ export default class Home extends Component {
           "likes": 12332,
           "description": "Con el tiempo, sabrán lo que es perder, sentir en lo mas profundo que tienes razon y aun asi, fallar.",
           "createAt": "23 Jan 19",
+          "comments": [
+            {
+              "commetId": "321",
+              "username": "Gamo_ri",
+              "commet": "JAJAJA mori!",
+              "createAt": "Feb 10 2019",
+            },
+            {
+              "commetId": "321",
+              "username": "Gamo_ri",
+              "commet": "JAJAJA mori!",
+              "createAt": "Feb 10 2019",
+            },
+          ]
         },
         {
           "id": "11",
@@ -113,6 +127,7 @@ export default class Home extends Component {
       Liked={item.liked}
       likes={`${item.likes} likes`}
       description={item.description}
+      comments={item.comments}
     />
   )
 
