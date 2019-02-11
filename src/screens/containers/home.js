@@ -10,13 +10,14 @@ export default class Home extends Component {
 
   static navigationOptions = ({navigation}) => {
     return {
+      title: 'Magistant',
       headerBackTitle: null,
       headerLeft:
       (
         <Icon
         type='SimpleLineIcons'
         name='camera'
-        style={{marginLeft: 10}}
+        style={{marginLeft: 10, fontSize: 26}}
         onPress={()=> navigation.navigate('Camera')}
         />
       ),
@@ -25,7 +26,7 @@ export default class Home extends Component {
         <Icon
         type='SimpleLineIcons'
         name='paper-plane'
-        style={{marginRight: 10}}
+        style={{marginRight: 10, fontSize: 26}}
         onPress={()=> navigation.navigate('Messages')}
         />
       ),

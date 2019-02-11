@@ -17,18 +17,25 @@ import Loading from './screens/containers/loading'
 import NewPost from './screens/containers/newpost'
 import Messages from './screens/containers/messages'
 
+const tabbarVisible = (navigation) => {
+  const { routes } = navigation.state;
+
+  let showTabbar = true;
+  routes.forEach((route) => {
+    if (route.routeName === 'Messages') {
+      showTabbar = false;
+    }
+  });
+
+  return showTabbar;
+};
+
 const mainNavigation = createStackNavigator(
   {
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        title: 'Magistant',
-      }
-    },
+    Home,
     AddMedia,
     Profile,
     Detail,
-    Messages,
     Camera: {
       screen: Camera,
       navigationOptions: {
@@ -41,7 +48,8 @@ const mainNavigation = createStackNavigator(
         title: '',
         headerLayoutPreset: 'center',
       }
-    }
+    },
+    Messages,
   }
 )
 
@@ -75,6 +83,13 @@ const tabNavigator = createBottomTabNavigator(
       inactiveTintColor: 'gray',
     },
   },
+)
+
+const innerNavigation = createStackNavigator(
+  {
+    Tabs: tabNavigator,
+    Messages,
+  }
 )
 
 const switchNavigator = createSwitchNavigator(

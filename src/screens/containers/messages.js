@@ -6,13 +6,32 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-import {Container, Content, Card, CardItem, Thumbnail, Body, Left, Text} from 'native-base'
+import {Container, Content, Card, CardItem, Thumbnail, Body, Left, Text, Icon,} from 'native-base'
 import CardMessage from '../../sections/components/card-message'
 
 export default class Messages extends Component {
 
-  static navigationOptions = {
-    title: 'Mensajes',
+  static navigationOptions = ({navigation}) => {
+    return {
+      title: 'Mensajes',
+      headerLeft: (
+        <Icon
+          type='SimpleLineIcons'
+          name='arrow-left'
+          style={styles.iconBack}
+          onPress={()=> navigation.goBack()}
+        />
+      ),
+      headerRight: (
+        <Icon
+          type='AntDesign'
+          name='plus'
+          style={styles.icon}
+          onPress={()=> navigation.navigate('Home')}
+        />
+      ),
+      tabBarVisible: false,
+    }
   }
 
   constructor(props) {
@@ -86,5 +105,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     backgroundColor: '#ededed',
+  },
+  icon: {
+    marginHorizontal: 10,
+  },
+  iconBack: {
+    marginHorizontal: 10,
+    fontSize: 24,
   }
 });
