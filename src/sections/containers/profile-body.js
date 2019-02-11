@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     borderTopWidth: 1,
-    borderTopColor: '#eae5e5',
+    borderTopColor: '#dedede',
   },
   gridSectionContainer:{
     flexDirection: 'row',

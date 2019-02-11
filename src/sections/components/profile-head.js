@@ -7,56 +7,80 @@ import {
 import { Container, Content, Text, Button, Icon } from 'native-base'
 
 const ProfileHead = (props) => (
-  <View style={styles.profileHeadContainer}>
-    <View style={styles.profileHeadWrapper}>
-      <View style={styles.profileImageContainer}>
-        <Image
-          source={require('../../../assets/profile.jpg')}
-          style={styles.profilePicture}
-        />
-      </View>{/* end profileImageContainer */}
+  <View>
+    <View style={styles.profileHeadContainer}>
+      <View style={styles.profileHeadWrapper}>
+        <View style={styles.profileImageContainer}>
+          <Image
+            source={require('../../../assets/profile.jpg')}
+            style={styles.profilePicture}
+          />
+        </View>{/* end profileImageContainer */}
 
-      <View style={styles.detailsContainer}>
-        <View style={styles.detailsWrapper}>
-          <View style={styles.detail}>
-              <Text style={styles.detailNumber}>1</Text>
-              <Text style={styles.detailTitle}>Publicaciones</Text>
-          </View>{/* end details */}
-          <View style={styles.detail}>
-              <Text style={styles.detailNumber}>120 k</Text>
-              <Text style={styles.detailTitle}>Seguidores</Text>
-          </View>{/* end details */}
-          <View style={styles.detail}>
-              <Text style={styles.detailNumber}>249</Text>
-              <Text style={styles.detailTitle}>Seguidos</Text>
-          </View>{/* end details */}
-        </View>{/* end detailsWrapper */}
+        <View style={styles.detailsContainer}>
+          <View style={styles.detailsWrapper}>
+            <View style={styles.detail}>
+                <Text style={styles.detailNumber}>1</Text>
+                <Text style={styles.detailTitle}>Publicaciones</Text>
+            </View>{/* end details */}
+            <View style={styles.detail}>
+                <Text style={styles.detailNumber}>120 k</Text>
+                <Text style={styles.detailTitle}>Seguidores</Text>
+            </View>{/* end details */}
+            <View style={styles.detail}>
+                <Text style={styles.detailNumber}>249</Text>
+                <Text style={styles.detailTitle}>Seguidos</Text>
+            </View>{/* end details */}
+          </View>{/* end detailsWrapper */}
 
-        <View style={styles.profileEditContainer}>
-            <View style={styles.editButtonContainer}>
-                <Button
-                  bordered
-                  dark
-                  style={styles.editButton}>
-                    <Text
-                      style={styles.editButtonText}
-                    >
-                      Editar perfil
-                    </Text>
-                </Button>
-            </View>
-        </View>{/**End edit profile**/}
+          <View style={styles.profileEditContainer}>
+              <View style={styles.editButtonContainer}>
+                  <Button
+                    bordered
+                    dark
+                    style={styles.editButton}>
+                      <Text
+                        style={styles.editButtonText}
+                      >
+                        Editar perfil
+                      </Text>
+                  </Button>
+              </View>
+          </View>{/**End edit profile**/}
 
+        </View>{/* end detailsContainer */}
+      </View>{/* end profileHeadWrapper */}
 
-
-      </View>{/* end detailsContainer */}
+      <View style={styles.profileDescription}>
+              <Text style={styles.fullname}>Thanos de Titan</Text>
+              <Text style={styles.description}>El titan loco{"\n"}www.infinitygaunlet.com </Text>
+      </View>{/* end profileDescription */}
 
     </View>{/* end profileHeadWrapper */}
 
-    <View style={styles.profileDescription}>
-            <Text style={styles.fullname}>Thanos de Titan</Text>
-            <Text style={styles.description}>El titan loco{"\n"}www.infinitygaunlet.com </Text>
-    </View>{/* end profileDescription */}
+    <View style={styles.contactContainer}>
+        <View style={styles.contactBtnContainer}>
+            <Button
+              transparent
+              style={styles.contactBtn}>
+                <Text
+                  style={styles.editButtonText}
+                >
+                  Llamar
+                </Text>
+            </Button>
+            <Button
+              transparent
+              style={styles.contactBtn}>
+                <Text
+                  style={styles.editButtonText}
+                >
+                  Enviar correo
+                </Text>
+            </Button>
+        </View>
+    </View>{/**End contant buttons**/}
+
   </View>
 );
 
@@ -128,5 +152,19 @@ const styles = StyleSheet.create({
   },
   editButtonText: {
     fontSize: 14,
-  }
+  },
+  contactContainer:{
+
+  },
+  contactBtnContainer: {
+    flexDirection: 'row',
+    borderTopWidth: 1,
+    borderColor: '#dedede',
+  },
+  contactBtn: {
+    flex: 1,
+    margin: 0,
+    justifyContent: 'center',
+    height: 36,
+  },
 });
