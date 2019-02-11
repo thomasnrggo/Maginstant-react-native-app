@@ -54,12 +54,33 @@ const CardComponent = (props) => (
         </CardItem>
 
         <CardItem>
-          <Text style={styles.description}>
-            <Text style={styles.username}>
-              {`${props.username} `}
+          <Body>
+            <Text style={styles.description}>
+              <Text style={styles.username}>
+                {`${props.username} `}
+              </Text>
+                 {props.description}
             </Text>
-               {props.description}
-          </Text>
+            <Text
+              note
+              onPress={()=> {console.log('Me toco!')}}
+            >
+              ver los 13 comentarios
+            </Text>
+          </Body>
+        </CardItem>
+
+        <CardItem>
+          <Body style={styles.commetsContainer}>
+            <Text style={styles.commet}>
+              <Text style={styles.commetUsername}>{`Gamo_ri `}</Text>
+              Comentario
+            </Text>
+            <Text style={styles.commet}>
+              <Text style={styles.commetUsername}>{`NebulaZa `}</Text>
+              lorem ipsum amenr.
+            </Text>
+          </Body>
         </CardItem>
 
 
@@ -70,6 +91,7 @@ export default CardComponent;
 
 const styles = StyleSheet.create({
   username: {
+    fontSize: 15,
     fontWeight: 'bold',
   },
   image: {
@@ -88,5 +110,20 @@ const styles = StyleSheet.create({
     marginLeft: -2,
   },
   description: {
+    fontSize: 14,
+    lineHeight: 18,
+    marginBottom: 6,
+  },
+  commetsContainer: {
+    marginTop: -8,
+  },
+  commetUsername:{
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  commet:{
+    lineHeight: 16,
+    fontSize: 14,
+    marginBottom: 4,
   },
 });
