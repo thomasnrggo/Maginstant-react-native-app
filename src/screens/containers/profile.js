@@ -9,6 +9,14 @@ export default class Profile extends Component {
     title: 'TitanLoco8',
     headerLeft: null,
     headerBackTitle: null,
+    headerRight:
+    (
+      <Icon
+      type='SimpleLineIcons'
+      name='settings'
+      style={{marginRight: 10, fontSize: 26, color: '#323232'}}
+      />
+    ),
     tabBarIcon: ({tintColor, focused}) => (
       <Icon
         type='SimpleLineIcons'

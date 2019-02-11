@@ -4,9 +4,9 @@ import {
   StyleSheet,
   Image,
 } from 'react-native';
-import { Container, Content, Text, } from 'native-base'
+import { Container, Content, Text, Button, Icon } from 'native-base'
 
-const ProfileHead = () => (
+const ProfileHead = (props) => (
   <View style={styles.profileHeadContainer}>
     <View style={styles.profileHeadWrapper}>
       <View style={styles.profileImageContainer}>
@@ -20,17 +20,35 @@ const ProfileHead = () => (
         <View style={styles.detailsWrapper}>
           <View style={styles.detail}>
               <Text style={styles.detailNumber}>1</Text>
-              <Text style={styles.detailTitle}>Post</Text>
+              <Text style={styles.detailTitle}>Publicaciones</Text>
           </View>{/* end details */}
           <View style={styles.detail}>
               <Text style={styles.detailNumber}>120 k</Text>
-              <Text style={styles.detailTitle}>Followers</Text>
+              <Text style={styles.detailTitle}>Seguidores</Text>
           </View>{/* end details */}
           <View style={styles.detail}>
               <Text style={styles.detailNumber}>249</Text>
-              <Text style={styles.detailTitle}>Following</Text>
+              <Text style={styles.detailTitle}>Seguidos</Text>
           </View>{/* end details */}
         </View>{/* end detailsWrapper */}
+
+        <View style={styles.profileEditContainer}>
+            <View style={styles.editButtonContainer}>
+                <Button
+                  bordered
+                  dark
+                  style={styles.editButton}>
+                    <Text
+                      style={styles.editButtonText}
+                    >
+                      Editar perfil
+                    </Text>
+                </Button>
+            </View>
+        </View>{/**End edit profile**/}
+
+
+
       </View>{/* end detailsContainer */}
 
     </View>{/* end profileHeadWrapper */}
@@ -46,7 +64,7 @@ export default ProfileHead;
 
 const styles = StyleSheet.create({
   profileHeadContainer: {
-    paddingVertical: 10,
+    paddingVertical: 14,
   },
   profileHeadWrapper: {
     flexDirection: 'row',
@@ -76,17 +94,39 @@ const styles = StyleSheet.create({
   },
   detailTitle: {
     fontSize: 12,
-    color: 'gray',
+    color: '#b5b2b2',
   },
   profileDescription:{
     padding: 10,
   },
   fullname:{
     fontWeight: 'bold',
-    marginBottom: 2,
+    fontSize: 14,
+    letterSpacing: .16,
+    marginVertical: 2,
   },
   description: {
-    fontSize: 14,
-    color: '#262626',
+    marginTop: 4,
+    fontSize: 13,
+    color: '#333232',
   },
+  profileEditContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    paddingTop: 10
+  },
+  editButtonContainer: {
+    flexDirection: 'row',
+  },
+  editButton: {
+    flex: 1,
+    marginHorizontal: 12,
+    justifyContent: 'center',
+    height: 30,
+    borderColor: '#b5b2b2',
+    borderRadius: 5,
+  },
+  editButtonText: {
+    fontSize: 14,
+  }
 });
