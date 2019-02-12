@@ -3,11 +3,12 @@ import {
   View,
   Image,
   StyleSheet,
-  Alert,
   TextInput,
+  KeyboardAvoidingView,
+  TouchableOpacity,
 } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Text, Body, Left, Thumbnail, Button, Icon, Right } from "native-base";
-
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view' 
 
 const CardComponent = (props) => (
       <Card>
@@ -82,28 +83,27 @@ const CardComponent = (props) => (
           </Body>
         </CardItem>
 
-        <CardItem style={{alignItems: 'flex-end'}}>
-          <Thumbnail
-            small
-            source={{
-              uri: props.profileImage
-            }}
-          />
-          <TextInput
-            style={styles.commetInput}
-            multiline
-            placeholder='Agrega un comentario...'
-          />
-          <Button
-            transparent
-          >
-            <Icon
-              type="SimpleLineIcons"
-              name="paper-plane"
-              style={{color: '#3d3d3d'}}
+        <CardItem>
+          <KeyboardAvoidingView style={{flexDirection: 'row',alignItems: 'flex-end' }} behavior="padding" enabled>
+            <Thumbnail
+              small
+              source={{
+                uri: props.profileImage
+              }}
             />
-          </Button>
-
+            <TextInput
+              style={styles.commetInput}
+              multiline
+              placeholder='Agrega un comentario...'
+            />
+            <TouchableOpacity>
+              <Icon
+                type="SimpleLineIcons"
+                name="paper-plane"
+                style={{color: '#3d3d3d'}}
+              />
+            </TouchableOpacity>
+          </KeyboardAvoidingView>
         </CardItem>
 
 
