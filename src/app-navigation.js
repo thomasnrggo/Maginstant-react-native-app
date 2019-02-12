@@ -10,6 +10,8 @@ import { Icon } from 'native-base'
 import Home from './screens/containers/home'
 import AddMedia from './screens/containers/add-media'
 import Profile from './screens/containers/profile'
+import Search from './screens/containers/search'
+import Notifications from './screens/containers/notifications'
 import Detail from './screens/containers/detail'
 import Camera from './screens/containers/camera'
 import Login from './screens/containers/login'
@@ -35,6 +37,8 @@ const mainNavigation = createStackNavigator(
     Home,
     AddMedia,
     Profile,
+    Search,
+    Notifications,
     Detail,
     Camera: {
       screen: Camera,
@@ -69,9 +73,11 @@ const tabNavigator = createBottomTabNavigator(
         ),
       }
     },
+    Search,
     AddMedia: {
       screen: AddMedia,
     },
+    Notifications,
     Profile: {
       screen: Profile,
     }
