@@ -5,13 +5,13 @@ import {
   StyleSheet,
 } from 'react-native';
 import { Icon } from 'native-base'
+import Header from '../../sections/containers/searh-header'
 
 export default class Search extends Component {
 
   static navigationOptions = {
     title: 'Busqueda',
-    headerLeft: null,
-    headerBackTitle: null,
+    header: <Header />,
     tabBarIcon: ({tintColor, focused}) => (
       <Icon
         type='SimpleLineIcons'
