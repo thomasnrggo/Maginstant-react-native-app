@@ -38,6 +38,7 @@ const mainNavigation = createStackNavigator(
     AddMedia,
     Profile,
     Search,
+    Notifications,
     Detail,
     Camera: {
       screen: Camera,

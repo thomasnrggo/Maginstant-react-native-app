@@ -9,6 +9,7 @@ import {
   Animated,
 } from 'react-native'
 import { Icon, Container, Content } from 'native-base'
+import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 import Notification from '../../sections/components/notification-card'
 
 
