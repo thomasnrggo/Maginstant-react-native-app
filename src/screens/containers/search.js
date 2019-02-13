@@ -59,6 +59,12 @@ export default class Search extends Component {
           "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/happy.jpg?alt=media&token=0ee841c8-708c-441b-99af-fab89086a412",
           "description": 'Guardaespaldas de Iron Man.'
         },
+        {
+          "id": "1236",
+          "username": "Lovehughjackman",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/deadpool.jpg?alt=media&token=e7d97a0e-3b9f-42e1-b03d-0cda73f1c22a",
+          "description": 'Chimichangas.'
+        },
       ],
     }
   }

@@ -12,7 +12,7 @@ const ProfileHead = (props) => (
       <View style={styles.profileHeadWrapper}>
         <View style={styles.profileImageContainer}>
           <Image
-            source={require('../../../assets/profile.jpg')}
+            source={{uri: 'https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/thanos2.jpg?alt=media&token=f6a320bb-dc4b-43ba-9a22-f8453f1ff732'}}
             style={styles.profilePicture}
           />
         </View>{/* end profileImageContainer */}

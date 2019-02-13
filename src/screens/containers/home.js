@@ -41,7 +41,7 @@ export default class Home extends Component {
         {
           "id": "10",
           "username": "TitanLoco8",
-          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/thanos2.jpg?alt=media&token=f6a320bb-dc4b-43ba-9a22-f8453f1ff732",
           "type": "picture",
           "picture": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/example-01.jpg?alt=media&token=9512ab93-dda2-437e-bf65-bcb27f7fd0a1",
           "liked": true,
@@ -66,7 +66,7 @@ export default class Home extends Component {
         {
           "id": "11",
           "username": "TitanLoco8",
-          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/thanos2.jpg?alt=media&token=f6a320bb-dc4b-43ba-9a22-f8453f1ff732",
           "type": "picture",
           "picture": "https://images.pexels.com/photos/50582/selfie-monkey-self-portrait-macaca-nigra-50582.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           "liked": true,
@@ -77,7 +77,7 @@ export default class Home extends Component {
         {
           "id": "12",
           "username": "TitanLoco8",
-          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/thanos2.jpg?alt=media&token=f6a320bb-dc4b-43ba-9a22-f8453f1ff732",
           "type": "picture",
           "picture": "https://images.pexels.com/photos/39586/gorilla-silverback-monkey-silvery-grey-39586.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           "liked": true,
@@ -88,7 +88,7 @@ export default class Home extends Component {
         {
           "id": "13",
           "username": "TitanLoco8",
-          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/thanos2.jpg?alt=media&token=f6a320bb-dc4b-43ba-9a22-f8453f1ff732",
           "type": "picture",
           "picture": "https://images.pexels.com/photos/62289/yemen-chameleon-chamaeleo-calyptratus-chameleon-reptile-62289.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           "liked": true,
@@ -99,7 +99,7 @@ export default class Home extends Component {
         {
           "id": "14",
           "username": "TitanLoco8",
-          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/thanos2.jpg?alt=media&token=f6a320bb-dc4b-43ba-9a22-f8453f1ff732",
           "type": "picture",
           "picture": "https://images.pexels.com/photos/38280/monkey-mandril-africa-baboon-38280.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
           "liked": true,
