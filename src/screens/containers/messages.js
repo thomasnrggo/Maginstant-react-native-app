@@ -41,17 +41,17 @@ export default class Messages extends Component {
       [
         {
           "id": "123",
-          "username": "Bl3ssur",
-          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
+          "username": "IamIronman",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/tonystark.png?alt=media&token=904526ca-284d-42ba-a8c8-3ac5e992021a",
           "read": true,
-          "lastMessage": 'ultimisimo mensaje'
+          "lastMessage": 'Ultimo mensaje.'
         },
         {
           "id": "1234",
-          "username": "Whismichu",
-          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/profile.jpg?alt=media&token=33d8dbd0-3424-4753-9ec5-1c6a21979ab7",
+          "username": "Lovehughjackman",
+          "profileImage": "https://firebasestorage.googleapis.com/v0/b/magistant-c3788.appspot.com/o/deadpool.jpg?alt=media&token=e7d97a0e-3b9f-42e1-b03d-0cda73f1c22a",
           "read": true,
-          "lastMessage": 'ultimisimo mensaje'
+          "lastMessage": 'ultimo mensaje.'
         },
       ],
     }
