@@ -21,8 +21,8 @@ export default class Notifications extends Component {
     headerBackTitle: null,
     tabBarIcon: ({tintColor, focused}) => (
       <Icon
-        type='SimpleLineIcons'
-        name='bell'
+        type='AntDesign'
+        name='notification'
         style={{ color: tintColor}}
       />
     ),

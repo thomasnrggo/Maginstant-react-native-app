@@ -17,8 +17,8 @@ export default class Search extends Component {
     header: <Header />,
     tabBarIcon: ({tintColor, focused}) => (
       <Icon
-        type='SimpleLineIcons'
-        name='magnifier'
+        type='AntDesign'
+        name='search1'
         style={{ color: tintColor}}
       />
     ),

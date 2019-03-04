@@ -15,8 +15,8 @@ export default class Home extends Component {
       headerLeft:
       (
         <Icon
-        type='SimpleLineIcons'
-        name='camera'
+        type='AntDesign'
+        name='camerao'
         style={{marginLeft: 10, fontSize: 26}}
         onPress={()=> navigation.navigate('Camera')}
         />
@@ -24,9 +24,9 @@ export default class Home extends Component {
       headerRight:
       (
         <Icon
-        type='SimpleLineIcons'
-        name='paper-plane'
-        style={{marginRight: 10, fontSize: 26}}
+        type='AntDesign'
+        name='inbox'
+        style={{marginRight: 10, fontSize: 28}}
         onPress={()=> navigation.navigate('Messages')}
         />
       ),

@@ -65,7 +65,7 @@ const tabNavigator = createBottomTabNavigator(
         title: 'Inicio',
         tabBarIcon: ({tintColor, focused}) => (
           <Icon
-            type='SimpleLineIcons'
+            type='AntDesign'
             name='home'
             color={tintColor}
             size={10}

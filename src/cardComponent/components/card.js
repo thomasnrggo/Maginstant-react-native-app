@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Text, Body, Left, Thumbnail, Button, Icon, Right } from "native-base";
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view' 
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const CardComponent = (props) => (
       <Card>
@@ -43,8 +43,8 @@ const CardComponent = (props) => (
               onPress={this.clickLike}
             >
               <Icon
-                type="SimpleLineIcons"
-                name="heart"
+                type="AntDesign"
+                name="hearto"
                 style={{color: 'black'}}
               />
             </Button>
@@ -98,8 +98,8 @@ const CardComponent = (props) => (
             />
             <TouchableOpacity>
               <Icon
-                type="SimpleLineIcons"
-                name="paper-plane"
+                type="AntDesign"
+                name="totop"
                 style={{color: '#3d3d3d'}}
               />
             </TouchableOpacity>

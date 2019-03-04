@@ -24,7 +24,7 @@ export default class AddMedia extends Component {
     headerBackTitle: 'Regresar',
     tabBarIcon: ({tintColor}) => (
       <Icon
-        type='SimpleLineIcons'
+        type='AntDesign'
         name='plus'
         style={{ color: tintColor }}
         size={10}

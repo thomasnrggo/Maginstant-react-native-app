@@ -163,7 +163,7 @@ class ProfileNav extends Component {
               onPress={()=> this.selectedView(0)}
             >
               <Icon
-                type="SimpleLineIcons" name="grid"
+                type="AntDesign" name="appstore-o"
                 style={[this.state.activeIndex == 0 ? {} : {color: 'grey'}]}
               />
             </Button>
@@ -172,7 +172,7 @@ class ProfileNav extends Component {
               onPress={()=> this.selectedView(1)}
             >
               <Icon
-                type="SimpleLineIcons" name="list"
+                type="AntDesign" name="bars"
                 style={[this.state.activeIndex == 1 ? {} : {color: 'grey'}]}
               />
             </Button>

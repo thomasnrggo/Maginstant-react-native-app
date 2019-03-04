@@ -12,14 +12,14 @@ export default class Profile extends Component {
     headerRight:
     (
       <Icon
-      type='SimpleLineIcons'
-      name='settings'
+      type='AntDesign'
+      name='setting'
       style={{marginRight: 10, fontSize: 26, color: '#323232'}}
       />
     ),
     tabBarIcon: ({tintColor, focused}) => (
       <Icon
-        type='SimpleLineIcons'
+        type='AntDesign'
         name='user'
         style={{ color: tintColor}}
         size={10}
